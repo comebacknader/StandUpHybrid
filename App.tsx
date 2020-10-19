@@ -1,14 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import WebApplication from './src/components/WebApplication';
+import MobileApplication from './src/components/MobileApplication';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const platform = Platform.OS 
+  if (platform === "web") {
+    return <WebApplication />
+  } else {
+    return <MobileApplication />
+  };
 }
 
 const styles = StyleSheet.create({
