@@ -9,6 +9,11 @@ export const flexAndDirectionRow: ViewStyle = {
   flexDirection: 'row',
 }
 
+
+export const flexRow: ViewStyle = {
+  flexDirection: 'row',
+}
+
 export const flexColumn: ViewStyle = {
   flexDirection: 'column',
 }
@@ -21,7 +26,7 @@ export const justifyContentCenter: ViewStyle = {
   justifyContent: 'center',
 }
 
-export const paddingTen: ViewStyle = {
+export const padding20: ViewStyle = {
   padding: 10
 }
 
@@ -32,6 +37,22 @@ export const bottomBorderGray: ViewStyle = {
 
 export const marginLeft20: ViewStyle = {
   marginLeft: 20,
+}
+
+export const marginTop40: ViewStyle = {
+  marginTop: 40,
+}
+
+export const marginTop13: ViewStyle = {
+  marginTop: 13,
+}
+
+export const marginLeft40: ViewStyle = {
+  marginLeft: 40,
+}
+
+export const marginRight10: ViewStyle = {
+  marginRight: 10,
 }
 
 export const smallImage: ViewStyle = {
