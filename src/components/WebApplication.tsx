@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { Color, Layout, Dots, Typography, Dimensions, Buttons } from '../styles';
 import Microphone from './Microphone';
 
@@ -24,5 +24,3 @@ export default function WebApplication() {
     </View>
   )
 }
-
-const styles = StyleSheet.create({});
