@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WebApplication renders correctly 1`] = `
+exports[`Impressions renders correctly 1`] = `
 <View
   style={
     Array [
@@ -18,10 +18,13 @@ exports[`WebApplication renders correctly 1`] = `
           "alignItems": "center",
         },
         Object {
-          "marginTop": 40,
+          "paddingTop": 40,
         },
         Object {
           "width": 90,
+        },
+        Object {
+          "backgroundColor": "#FFF",
         },
       ]
     }

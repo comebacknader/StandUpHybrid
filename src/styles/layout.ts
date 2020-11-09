@@ -1,4 +1,4 @@
-import { ViewStyle } from "react-native"
+import { ViewStyle } from 'react-native';
 
 export const isFlex: ViewStyle = {
   flex: 1,
@@ -28,6 +28,10 @@ export const justifyContentCenter: ViewStyle = {
 
 export const padding20: ViewStyle = {
   padding: 10
+}
+
+export const paddingTop40: ViewStyle = {
+  paddingTop: 40,
 }
 
 export const bottomBorderGray: ViewStyle = {
