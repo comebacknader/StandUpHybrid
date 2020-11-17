@@ -7,6 +7,18 @@ import ListOfImpressions from './../components/impressions/ListOfImpressions';
 export default function Impressions() {
   const [ impressions, setImpressions ] = useState(["Hitler", "Rabbi", "Kanye West"])
 
+  const getAllImpressions = async () => {
+    let rawResponse = await fetch('', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+    let jsonResponse = await rawResponse.json()
+    console.log(JSON.stringify(jsonResponse, null, 2))
+  }
+
   return (
     <View style={[Layout.flexAndDirectionRow]}>
       <View style={[Layout.alignItemsCenter, Layout.paddingTop40, Dimensions.width90, Color.bgWhite]}>
@@ -25,7 +37,13 @@ export default function Impressions() {
           </TouchableOpacity>
         </View>
         :
+        <View style={[{marginTop: 30, marginLeft: 40, width: 500}]}>
           <ListOfImpressions impressions={impressions} />
+          <TouchableOpacity style={[Buttons.bigBlueDot, {alignSelf: 'flex-end', marginTop: 20}]}
+            onPress={getAllImpressions} >
+            <Text style={[Buttons.bigBlueDotText]}>+</Text>
+          </TouchableOpacity>
+        </View>
         }
       </View>
     </View>
