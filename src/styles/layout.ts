@@ -43,16 +43,20 @@ export const marginLeft20: ViewStyle = {
   marginLeft: 20,
 }
 
+export const marginLeft40: ViewStyle = {
+  marginLeft: 40,
+}
+
+export const marginLeft50: ViewStyle = {
+  marginLeft: 50,
+}
+
 export const marginTop40: ViewStyle = {
   marginTop: 40,
 }
 
 export const marginTop13: ViewStyle = {
   marginTop: 13,
-}
-
-export const marginLeft40: ViewStyle = {
-  marginLeft: 40,
 }
 
 export const marginRight10: ViewStyle = {
