@@ -6,10 +6,9 @@ import ListOfImpressions from './../components/impressions/ListOfImpressions';
 import { TextInput } from 'react-native-gesture-handler';
 
 export default function Impressions() {
-  const [ impressions, setImpressions ] = useState(['Hitler', 'Rabbi', 'Kanye West'])
-  const [ state, setState ] = useState<'new-impression'|'idle'>('idle')
-  const [ impression, setImpression ] = useState('')
-  const [ border, setBorder ] = useState(0)
+  const [ impressions, setImpressions ] = useState<string[]>([])
+  const [ state, setState ] = useState<'new-impression'|'idle'|'no-impressions'>('no-impressions')
+  const [ impression, setImpression ] = useState<string>('')
 
   const getAllImpressions = async () => {
     let rawResponse: any = await fetch('', {
@@ -27,6 +26,14 @@ export default function Impressions() {
     setState('new-impression')
   }
 
+  const enterImpression = (e: any) => { 
+    if (e.nativeEvent.key === 'Enter') {
+      setImpressions([ ...impressions, impression])
+      setImpression('') 
+      setState('idle')
+    }
+  }
+
   return (
     <View style={[Layout.flexAndDirectionRow]}>
       <View style={[Layout.alignItemsCenter, Layout.paddingTop40, Dimensions.width90, Color.bgWhite]}>
@@ -37,7 +44,7 @@ export default function Impressions() {
           <View style={[Dots.smallBlueDot, Layout.marginTop13, Layout.marginRight10]} ></View>
           <Text style={[Typography.fontSize22]}>Impressions</Text>
         </View>
-        { impressions.length === 0 ? 
+        { state === 'no-impressions' && impressions.length === 0 ? 
         <View style={[Layout.flexRow, Layout.justifyContentCenter, Layout.alignItemsCenter, Dimensions.height500]}>
           <Text style={[Typography.fontSize40, Color.darkerGray]}>No impressions added.</Text>
           <TouchableOpacity style={[Buttons.bigBlueDot, Layout.marginTop13, Layout.marginLeft40]} >
@@ -51,19 +58,10 @@ export default function Impressions() {
             <View style={[{marginTop: 10, backgroundColor: 'white', borderRadius: 10, padding: 10, width: 500, flexDirection: 'row'}]} >
               <View style={[{width: 5, height: 50, backgroundColor: Color.SECONDARY_BLUE}]}></View>
               <TextInput 
-                style={[Layout.marginLeft50, Typography.fontSize20, Layout.alignItemsCenter, { borderWidth: border, width: 400, paddingLeft: 10 }]} 
+                style={[Layout.marginLeft50, Typography.fontSize20, Layout.alignItemsCenter, { width: 400, paddingLeft: 10 }]} 
                 onChangeText={setImpression}
-                onKeyPress={(e) => { 
-                  if (e.nativeEvent.key === 'Enter') {
-                    setImpressions([ ...impressions, impression])
-                    setImpression('') 
-                    setState('idle')
-                  }
-                 }} 
+                onKeyPress={enterImpression} 
                 value={impression}
-                onFocus={() => {
-                  setBorder(0)
-                }}
                 autoFocus />
             </View>  
           : <></> }
