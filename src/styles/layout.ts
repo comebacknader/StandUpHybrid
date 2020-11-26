@@ -9,7 +9,6 @@ export const flexAndDirectionRow: ViewStyle = {
   flexDirection: 'row',
 }
 
-
 export const flexRow: ViewStyle = {
   flexDirection: 'row',
 }
@@ -22,16 +21,32 @@ export const alignItemsCenter: ViewStyle = {
   alignItems: 'center',
 }
 
+export const alignSelfCenter: ViewStyle = {
+  alignSelf: 'center',
+}
+
+export const alignSelfFlexEnd: ViewStyle = {
+  alignSelf: 'flex-end',
+}
+
 export const justifyContentCenter: ViewStyle = {
   justifyContent: 'center',
 }
 
-export const padding20: ViewStyle = {
+export const padding10: ViewStyle = {
   padding: 10
+}
+
+export const padding20: ViewStyle = {
+  padding: 20
 }
 
 export const paddingTop40: ViewStyle = {
   paddingTop: 40,
+}
+
+export const paddingLeft10: ViewStyle = {
+  paddingLeft: 10,
 }
 
 export const bottomBorderGray: ViewStyle = {
@@ -51,12 +66,24 @@ export const marginLeft50: ViewStyle = {
   marginLeft: 50,
 }
 
-export const marginTop40: ViewStyle = {
-  marginTop: 40,
-}
-
 export const marginTop13: ViewStyle = {
   marginTop: 13,
+}
+
+export const marginTop10: ViewStyle = {
+  marginTop: 10,
+}
+
+export const marginTop20: ViewStyle = {
+  marginTop: 20,
+}
+
+export const marginTop30: ViewStyle = {
+  marginTop: 30,
+}
+
+export const marginTop40: ViewStyle = {
+  marginTop: 40,
 }
 
 export const marginRight10: ViewStyle = {
@@ -67,3 +94,8 @@ export const smallImage: ViewStyle = {
   width: 60,
   height: 60
 }
+
+export const borderRadius10: ViewStyle = {
+  borderRadius: 10,
+}
+

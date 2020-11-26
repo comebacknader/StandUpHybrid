@@ -22,3 +22,7 @@ export const darkerGray = {
 export const bgWhite = {
   backgroundColor: '#FFF' 
 }
+
+export const bgSecondaryBlue = {
+  backgroundColor: SECONDARY_BLUE
+}
