@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Impressions /> renders correctly 1`] = `
+exports[`<Impression /> renders correctly 1`] = `
 <View
   style={
     Array [
@@ -199,81 +199,8 @@ exports[`<Impressions /> renders correctly 1`] = `
           ]
         }
       >
-        Impressions
+        
       </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "flexDirection": "row",
-          },
-          Object {
-            "justifyContent": "center",
-          },
-          Object {
-            "alignItems": "center",
-          },
-          Object {
-            "height": 500,
-          },
-        ]
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "fontSize": 40,
-            },
-            Object {
-              "color": "#787878",
-            },
-          ]
-        }
-      >
-        No impressions added.
-      </Text>
-      <View
-        accessibilityHint="Allows you to enter a name for a new impressionist"
-        accessibilityLabel="Add new impression"
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#B3E1FB",
-            "borderColor": "#B3E1FB",
-            "borderRadius": 50,
-            "height": 50,
-            "marginLeft": 40,
-            "marginTop": 13,
-            "opacity": 1,
-            "width": 50,
-          }
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "color": "white",
-                "fontSize": 30,
-                "fontWeight": "bold",
-              },
-            ]
-          }
-        >
-          +
-        </Text>
-      </View>
     </View>
   </View>
 </View>
