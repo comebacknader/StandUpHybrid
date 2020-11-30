@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Checking out repository from Github'
                 checkout scm
+                bat 'cd StandUpHybrid'
                 bat 'npm install'
             }
         }
