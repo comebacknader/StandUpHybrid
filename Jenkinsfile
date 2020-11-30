@@ -4,6 +4,8 @@ pipeline {
         stage('SCM Checkout') {
             steps {
                 echo 'Checking out repository from Github'
+                checkout scm
+                bat 'npm install'
             }
         }
         stage('Build') {
