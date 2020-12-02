@@ -4,9 +4,10 @@ pipeline {
         stage('SCM Checkout') {
             steps {
                 echo 'Checking out repository from Github'
-                checkout scm
-                bat 'cd StandUpHybrid'
-                bat 'npm install'
+                bat 'git clone https://github.com/comebacknader/StandUpHybrid.git'
+                dir('StandUpHybrid') {
+                    bat 'npm install'
+                }
             }
         }
         stage('Build') {
