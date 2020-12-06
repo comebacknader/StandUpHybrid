@@ -5,8 +5,10 @@ pipeline {
             steps {
                 echo 'Checking out repository from Github'
                 bat 'git clone https://github.com/comebacknader/StandUpHybrid.git'
-                dir('StandUpHybrid') {
-                    bat 'npm install'
+                if(fileExists('StandUpHybrid')) {
+                    dir('StandUpHybrid') {
+                        bat 'npm install'
+                    }
                 }
             }
         }
